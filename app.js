@@ -1,10 +1,8 @@
 const mobileToggler = document.querySelector('#menu-toggler');
-const menu = document.querySelector('.menu__list');
+const menu = document.querySelector('.menu');
+const menuList = document.querySelector('.menu__list');
 
 mobileToggler.addEventListener('click', () => {
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-  } else {
-    menu.style.display = 'block';
-  }
-})
+  menu.classList.toggle('active');
+  menuList.classList.toggle('active');
+});
